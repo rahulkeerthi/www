@@ -35,6 +35,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
+  gem 'erb_lint', require: false
 end
 
 group :development do
