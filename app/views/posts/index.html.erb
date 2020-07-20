@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Blog</h1>
+  <ul>
+    <% @posts.each do |post| %>
+      <%= link_to post_path(post) do %>
+        <li><%= post.title %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>
+    <%= @post.title %>
+    <span> </span>
+    <%= link_to edit_post_path do %>
+      <%= icon('fas', 'edit') %>
+    <% end %>
+  </h1>
+  <h2>
+    <%= @post.subtitle %>
+  </h2>
+  <p><em>Published <%= time_ago_in_words(@post.created_at) %> ago</em></p>
+  <p><%= @post.rich_content.to_s.split(' ').length / 200 < 1 ? "< 1" : @post.rich_content.to_s.split(' ').length / 200 %> min reading time</p>
+  <p><%= @post.rich_content %></p>
+</div>
